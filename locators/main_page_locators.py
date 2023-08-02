@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 
 class MainPageLocators:
 
-    BANNER_CLOSE = (By.CSS_SELECTOR, "div[class='close']")
+    BANNER_CLOSE = (By.CSS_SELECTOR, "#weekendOrderForm > div.close")
 
 
 

@@ -14,31 +14,30 @@ class OrderPage(BasePage):
     def filling_in_the_data(self):
         self.elements_is_visible(self.locators.NAME).send_keys('Ivanov Test')
         self.elements_is_visible(self.locators.EMAIL).send_keys(f'test{random.randint(1, 100)}@mail.ru')
+        time.sleep(2)
         self.elements_is_visible(self.locators.PHONE).send_keys('79001000000')
         self.elements_is_visible(self.locators.CITY).clear()
         self.elements_is_visible(self.locators.CITY).send_keys('Moscow')
         # self.elements_is_visible(self.locators.ADDRESS).send_keys('Каретный переулок, 20')
         self.elements_is_visible(self.locators.COMMENT).send_keys('Тестовый текст')
+        print(self.elements_is_present(self.locators.EMAIL).text)
 
 
     def choosing_a_delivery_method(self):
-        delivery_in_moscow = self.locators.DELIVERY_IN_MOSCOW
         cdek = self.locators.CDEK
         leninskiy_24 = self.locators.LENINSKIY_24
         voykovskaya = self.locators.VOYKOVSKAYA
-        novogireevo = self.locators.NOVOGIREEVO
         govorovo = self.locators.GOVOROVO
         avtozavodskaya = self.locators.AVTOZAVODSKAYA
         terminal_transport = self.locators.TERMINAL_TRANSPORT
         flat_transport = self.locators.FLAT_TRANSPORT
-        delivery = [cdek, leninskiy_24, voykovskaya, novogireevo,
-                    govorovo, avtozavodskaya, terminal_transport, flat_transport]
+        delivery = [cdek, leninskiy_24, voykovskaya, govorovo,
+                    avtozavodskaya, terminal_transport, flat_transport]
 
         self.elements_is_clickable(random.choice(delivery)).click()
 
 
     def choosing_payment(self):
-        cash = self.locators.CASH
         sberbank = self.locators.SBERBANK
         online_payment = self.locators.ONLINE_PAYMENT
         credit = self.locators.CREDIT
@@ -50,7 +49,7 @@ class OrderPage(BasePage):
     def help_sealer(self):
         self.elements_is_clickable(self.locators.BUTTON_SEALER).click()
         self.elements_is_clickable(self.locators.BUTTON_SELECT).click()
-        showroom = ['LENINSKIY', 'ROOMER', 'FIMILYROOM', 'NOVOGIREEVO', 'GOVOROVO']
+        showroom = ['LENINSKIY', 'ROOMER', 'FIMILYROOM', 'GOVOROVO']
         x = self.elements_is_visible(self.locators.BUTTON_SELECT)
         drop = Select(x)
         drop.select_by_value(random.choice(showroom))

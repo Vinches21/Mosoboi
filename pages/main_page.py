@@ -4,9 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
 from pages.base_page import BasePage
-from locators.main_page_locators import SearchLocators, FooterLocators
-
-
+from locators.main_page_locators import SearchLocators, FooterLocators, MainPageLocators
 
 
 class Search(BasePage):
@@ -32,5 +30,8 @@ class Footer(BasePage):
         print(captcha)
 
 
-class Main_page:
-    pass
+class BannerClose(BasePage):
+    locators = MainPageLocators()
+
+    def close_banner(self):
+        self.elements_is_visible(self.locators.BANNER_CLOSE).click()

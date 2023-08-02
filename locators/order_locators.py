@@ -18,7 +18,6 @@ class OrderLocators:
     CDEK = (By.CSS_SELECTOR, 'div[class="item_oform_z_text"] label[for="ID_DELIVERY_ID_60"]')
     LENINSKIY_24 = (By.CSS_SELECTOR, 'div.item_oform_z.id_24 > label')
     VOYKOVSKAYA = (By.CSS_SELECTOR, 'div.item_oform_z.id_23 > label')
-    NOVOGIREEVO = (By.CSS_SELECTOR, 'div.item_oform_z.id_25 > label')
     GOVOROVO = (By.CSS_SELECTOR, 'div.item_oform_z.id_61 > label')
     AVTOZAVODSKAYA = (By.CSS_SELECTOR, 'div.item_oform_z.id_2 > label')
     TERMINAL_TRANSPORT = (By.CSS_SELECTOR, 'div.item_oform_z.id_3 > label')
@@ -35,8 +34,8 @@ class OrderLocators:
 
     #sealer
 
-    BUTTON_SEALER = (By.CSS_SELECTOR, 'div[class="order_with_help"] input[type="checkbox"]')
-    BUTTON_SELECT = (By.CSS_SELECTOR, 'select[id="ORDER_PROP_30"]')
+    BUTTON_SEALER = (By.CSS_SELECTOR, '.js_withHelp')
+    BUTTON_SELECT = (By.CSS_SELECTOR, '#ORDER_PROP_30')
 
     #oform
 
