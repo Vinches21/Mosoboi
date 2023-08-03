@@ -20,7 +20,7 @@ class OrderPage(BasePage):
         self.elements_is_visible(self.locators.CITY).send_keys('Moscow')
         # self.elements_is_visible(self.locators.ADDRESS).send_keys('Каретный переулок, 20')
         self.elements_is_visible(self.locators.COMMENT).send_keys('Тестовый текст')
-        print(self.elements_is_present(self.locators.EMAIL).text)
+
 
 
     def choosing_a_delivery_method(self):

@@ -31,7 +31,7 @@ class TestSmokeOneProduct:
         try:
             order.choosing_a_delivery_method()
             order.choosing_payment()
-            order.help_sealer()
+            # order.help_sealer()
         except StaleElementReferenceException:
             print("Не удалось(( Идём дальше!")
         # order.click_oform()

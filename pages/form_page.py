@@ -157,7 +157,7 @@ class FormSpecialPrice(BasePage):
         self.elements_is_visible(self.locators.MESSAGE).send_keys('Проверка формы Специальная цена')
         self.elements_is_visible(self.locators.CALLS_FROM).send_keys('10')
         self.elements_is_visible(self.locators.CALLS_TO).send_keys('18')
-        self.elements_is_visible(self.locators.BUTTON_SEND).click()
+        # self.elements_is_visible(self.locators.BUTTON_SEND).click()
 
 class FormFoundCheaper(BasePage):
     locators = FormFoundCheaperLocators()

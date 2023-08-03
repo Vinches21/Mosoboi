@@ -63,6 +63,6 @@ class TestForm:
 class TestCalculator:
     """Расчет количество рулонов на калькуляторе"""
     def test_counting_the_quantity_on_the_calculator(self, driver):
-        counting_quantity = FormCalculator(driver, 'https://www.mosoboi.ru/catalog/morris-co-arhive/112876/')
+        counting_quantity = FormCalculator(driver, 'https://www.mosoboi.ru/catalog/morris-co-arhive/112852/')
         counting_quantity.open()
         counting_quantity.filling_calculator()
